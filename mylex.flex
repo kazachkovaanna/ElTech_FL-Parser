@@ -35,7 +35,7 @@ Operator = "+" | "-" | "*" | "/" | "%" | "==" | "!=" | ">" | ">=" | "<" | "<=" |
 Set = ":="
 Semicolon = ";"
 NewLine = \n | \r | \r\n
-Skip = "skip" ([ ,\t])
+Skip = "skip" 
 Var = [a-zA-Z]+
 Write = "write" ([, ,\t])
 Read = "read" ([, ,\t])

@@ -87,9 +87,9 @@ S:      SKIP
             $$ = new ParserVal(new GenericTreeNode("s"));
             node = (GenericTreeNode)$$.obj;
             node.addChild(new GenericTreeNode("while"));
-            node.addChild((GenericTreeNode)$0.obj);
+            node.addChild((GenericTreeNode)$2.obj);
             node.addChild(new GenericTreeNode("do"));
-            node.addChild((GenericTreeNode)$3.obj);
+            node.addChild((GenericTreeNode)$4.obj);
         }
       | IF EXPR THEN S ELSE S   
         {
@@ -97,11 +97,11 @@ S:      SKIP
             $$ = new ParserVal(new GenericTreeNode("s"));
             node = (GenericTreeNode)$$.obj;
             node.addChild(new GenericTreeNode("if"));
-            node.addChild((GenericTreeNode)$1.obj);
+            node.addChild((GenericTreeNode)$2.obj);
             node.addChild(new GenericTreeNode("then"));
-            node.addChild((GenericTreeNode)$3.obj);
+            node.addChild((GenericTreeNode)$4.obj);
             node.addChild(new GenericTreeNode("else"));
-            node.addChild((GenericTreeNode)$5.obj);
+            node.addChild((GenericTreeNode)$6.obj);
         }
       ;
 
@@ -137,7 +137,7 @@ EXPR:     NUM
             $$ = new ParserVal(new GenericTreeNode("expr"));
             node = (GenericTreeNode)$$.obj;
             node.addChild(new GenericTreeNode("("));
-            node.addChild((GenericTreeNode)$1.obj);
+            node.addChild((GenericTreeNode)$2.obj);
             node.addChild(new GenericTreeNode(")"));
         }
         ;

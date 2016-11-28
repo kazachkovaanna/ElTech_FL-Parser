@@ -34,7 +34,13 @@ public class Main {
     
     System.out.println();
     GenericTreeNode root= parser.getRoot();
-    System.out.println(root.toStr(new StringBuilder(), 0).toString());
+    try{
+        System.out.println(root.toStr(new StringBuilder(), 0).toString());
+      
+    }
+    catch(NullPointerException e){
+
+    }
   }
 
 

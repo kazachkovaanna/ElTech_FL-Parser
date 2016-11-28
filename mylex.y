@@ -168,8 +168,19 @@ VART: VAR
       return yyl_return;
     }
     public void yyerror (String error) {
-      System.err.println ("Error: " + error);
-    }
+        switch(error) {
+        case "syntax error":
+            System.err.println();
+            System.err.println ("Error: " + error);
+            System.err.println("\tline: " + yylval.line);
+            System.err.println("\tcolumn: " + yylval.column);
+            break;
+        case "stack underflow. aborting...":
+        case "Stack underflow. aborting...":
+            System.err.println("aborting...");
+            break;
+        }
+      }
     public Parser(Reader r) {
       lexer = new Yylex(r, this);
       list = new ArrayList();

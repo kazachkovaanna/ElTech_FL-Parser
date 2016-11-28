@@ -33,6 +33,9 @@ public boolean usedSval = false;
 public Object obj;
 public boolean usedObj = false;
 
+public int line;
+public int column;
+
 //#############################################
 //## C O N S T R U C T O R S
 //#############################################
@@ -76,6 +79,11 @@ public ParserVal(Object val)
 {
   obj=val;
   usedObj = true;
+}
+
+public ParserVal(int l, int c){
+  line = l;
+  column = c;
 }
 
 @Override
